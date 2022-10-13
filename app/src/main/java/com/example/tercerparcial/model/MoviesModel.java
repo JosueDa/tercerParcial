@@ -14,8 +14,8 @@ import retrofit2.Response;
 
 public class MoviesModel implements IMoviesModel{
 
-    IMoviesPresenter moviesPresenter;
-    MoviesApi moviesApi;
+    private IMoviesPresenter moviesPresenter;
+    private MoviesApi moviesApi;
 
     public MoviesModel(IMoviesPresenter presenter){
         this.moviesPresenter=presenter;

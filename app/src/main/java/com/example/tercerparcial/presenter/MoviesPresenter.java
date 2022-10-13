@@ -9,12 +9,17 @@ import java.util.List;
 
 public class MoviesPresenter implements IMoviesPresenter{
 
-    IMoviesView moviesView;
-    IMoviesModel moviesModel;
+    private IMoviesView moviesView;
+    private IMoviesModel moviesModel;
 
     public MoviesPresenter(IMoviesView view){
         moviesView=view;
         moviesModel=new MoviesModel(this);
+    }
+
+    @Override
+    public void getMovies() {
+        moviesModel.getMovies();
     }
 
     @Override

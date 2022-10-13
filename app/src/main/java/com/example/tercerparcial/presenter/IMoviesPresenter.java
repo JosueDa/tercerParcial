@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface IMoviesPresenter {
 
+    void getMovies();
+
     void onSuccess(List<Movie> movies);
 
     void onError(String msg);

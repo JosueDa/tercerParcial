@@ -50,6 +50,13 @@ public class MoviesAdapter  extends RecyclerView.Adapter<MoviesAdapter.ViewHolde
 
         // Set item views based on your views and data model
         holder.title.setText(movie.title);
+        holder.year.setText(movie.year);
+        holder.runtime.setText(movie.getRuntime());
+        holder.director.setText(movie.director);
+        holder.actors.setText(movie.actors);
+        holder.plot.setText(movie.plot);
+
+        holder.genresMovie.setText(movie.getGenres());
         Glide.with(this.context).load(movie.posterUrl).into(holder.poster);
     }
 
@@ -66,17 +73,21 @@ public class MoviesAdapter  extends RecyclerView.Adapter<MoviesAdapter.ViewHolde
         private TextView runtime;
         private TextView director;
         private TextView actors;
+        private TextView plot;
+        private TextView genresMovie;
         private ImageView poster;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            poster = itemView.findViewById(R.id.imageMovie);
-            title = itemView.findViewById(R.id.titleMovie);
+           title = itemView.findViewById(R.id.titleMovie);
             year = itemView.findViewById(R.id.yearMovie);
             runtime = itemView.findViewById(R.id.runtimeMovie);
             director = itemView.findViewById(R.id.directorMovie);
             actors = itemView.findViewById(R.id.actorsMovie);
+            plot = itemView.findViewById(R.id.plotMovie);
+            genresMovie = itemView.findViewById(R.id.genresMovie);
+            poster = itemView.findViewById(R.id.imageMovie);
 
         }
 
